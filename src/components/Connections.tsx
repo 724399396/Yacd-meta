@@ -86,7 +86,7 @@ function filterConns(conns: FormattedConn[], keyword: string, sourceIp: string) 
         conn.network,
         conn.process,
       ].some((field) => {
-        return hasSubstring(field, keyword);
+        return hasSubstring(`${field}`, keyword);
       })
     );
   }
