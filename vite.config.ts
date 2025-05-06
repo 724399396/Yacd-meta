@@ -12,6 +12,9 @@ export default defineConfig(({ mode }) => ({
     'process.env.NODE_ENV': JSON.stringify(mode),
     'process.env.PUBLIC_URL': JSON.stringify('./'),
   },
+  server: {
+    host: '0.0.0.0', // Listen on all network interfaces
+  },
   base: './',
   resolve: {
     alias: {
